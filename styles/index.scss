@@ -1,0 +1,141 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+@import 'header.scss';
+@import 'medicalApp';
+@import 'important.scss';
+@import 'algorithm.scss';
+@import 'photoProcessing';
+@import 'availible.scss';
+@import 'bottom';
+
+* {
+
+    box-sizing: border-box;
+    font-size: $fs-xsm;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0 0;
+    // display: flex;
+    // flex-direction: column;
+}
+
+a {
+    cursor: pointer;
+}
+
+
+.topBG {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    background:
+        url('images/bg/bubblesTopTogether.svg')no-repeat center -150px,
+        url(../src/images/bg/srcBGupWave-min.svg) no-repeat center bottom;
+
+    max-width: 100%;
+    height: 986px;
+    position: relative;
+
+}
+
+.content {
+    display: flex;
+    // flex-direction: column;
+    max-width: 1130px;
+    flex-shrink: 1;
+    padding: 0 10px;
+}
+
+h1 {
+    font-size: $fs-h1-mob;
+    letter-spacing: 0.01em;
+    color: $primary-color;
+
+    @include lgSize {
+        font-size: $fs-h1-desk;
+    }
+}
+
+h2 {
+    margin: 0;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    text-align: left;
+
+    @include xLgSize {
+        font-size: 60px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 60px;
+        letter-spacing: 0, 01em;
+    }
+}
+
+p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: -0.03em;
+}
+a {
+    color: $primary-color;
+    text-decoration: none;
+}
+a:hover {
+    opacity: .7;
+}
+a:visited {
+    opacity: .3;
+}
+// ==== HIDE ====
+.hideElem {
+    display: none;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    background: $deepBlue-color;
+    border: 3px solid #164BC9;
+    border-radius: 30px;
+    color: $primary-color;
+    padding: 18px 30px;
+}
+
+.arrowBtn {
+    margin-left: auto;
+}
+
+.btnText {
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.03em;
+}
+
+// ==== animation classes
+
+.moveUpStart {
+    transform: translateY(25px);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.moveUpStart.active,
+.moveRight.active,
+.moveLeft.active {
+    transform: translate(0, 0);
+    opacity: 1;
+}

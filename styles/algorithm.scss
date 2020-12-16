@@ -1,0 +1,179 @@
+
+.algorithmTheme {
+    margin-top: 74px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    // .algorithmTheme_content
+
+    &_content.content {
+
+        flex-direction: column;
+        @include mdSize {
+            flex-direction: row;
+           
+        }
+    }
+
+    &_textBlock {
+        width: 100%;
+        @include mdSize {
+            width: 50%;
+           
+        }
+    }
+
+    // .algorithmTheme_title
+
+
+    &_title {
+        color: $dark-color;
+    }
+
+    // .algorithmTheme_description
+
+    &_description {
+        font-size: 18px;
+    }
+    &_description.moveUpStart {
+        transition-delay: .2s;
+    }
+
+    // .algorithmTheme_graphicBlock
+
+    &_graphicBlock {
+        margin: 30px auto;
+        display: flex;
+        justify-content: space-between;
+        width: 300px;
+        @include mdSize {
+            width: 50%;
+            max-width: 540px;
+            margin: auto 0 0 30px;
+        }
+    }
+
+    &_info-description {
+        display: block;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    &_info-description.active {
+        transition-delay: .4s;
+    }
+}
+
+.wrapper-circle-info {
+    width: 135px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include lgSize {
+        width: 255px;
+
+    }
+}
+.circle-info {
+   
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    @include mdSize {
+        height: 150px;
+        width: 150px;
+    }
+}
+
+.graphicBlock-cirle-normal,
+.graphicBlock-cirle-high {
+    border: 3px solid $grey-color;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.circle-normal-fill,
+.circle-high-fill {
+    position: absolute;
+    left: -4px;
+    top: -4px;
+}
+
+.normal-fill,
+.high-fill {
+    transform: rotate(-90deg);
+    width: 130px;
+    height: 130px;
+    @include mdSize {
+        height: 150px;
+        width: 150px;
+    }
+}
+
+.moveUpStart.active .trimPathCircle1 {
+    stroke-dasharray: 470;
+    stroke-dashoffset: 471;
+    animation: revealNormalCircle 3s ease forwards;
+
+}
+
+.moveUpStart.active .trimPathCircle2 {
+    stroke-dasharray: 470;
+    stroke-dashoffset: 471;
+    animation: revealHighCircle 3s ease forwards;
+
+}
+
+@keyframes revealNormalCircle {
+    70% {
+        stroke-dashoffset: 60;
+    }
+
+    100% {
+        stroke-dashoffset: 80;
+    }
+}
+
+@keyframes revealHighCircle {
+    70% {
+        stroke-dashoffset: 80;
+    }
+
+    100% {
+        stroke-dashoffset: 125;
+    }
+}
+
+.cirlce-num {
+    display: block;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.cirlce-num.moveUpStart.active {
+    transition-delay: .2s;
+}
+
+.cirlce-sec {
+    display: block;
+    width: 100%;
+    text-align: center;
+    height: auto;
+}
+
+.cirlce-sec.moveUpStart.active {
+    transition-delay: .3s;
+}
+
+.graphicBlock-cirle-high {}
+
+.circle-high-fill {}
+
+.cirlce-high-num {}
+
+.cirlce-high-sec {}

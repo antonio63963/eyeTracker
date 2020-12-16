@@ -1,0 +1,380 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.topBG.content {
+    flex-direction: column;
+}
+
+.topSection {
+    position: relative;
+    max-width: 100%;
+    min-height: 968px;
+    // flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    color: $primary-color;
+
+}
+
+.burger-btn {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+
+    @include mdSize {
+        display: none;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 11px;
+
+    &_logo-block {
+        max-width: 268px;
+        display: flex;
+    }
+
+    & .logo-text {
+        display: none;
+
+        @include mdSize {
+            display: block;
+        }
+    }
+
+    & .logo-img {
+        width: 52px;
+        margin-right: 7px;
+    }
+
+
+    // navigation
+
+    &_nav {
+        width: 50;
+    }
+
+    &_menu {
+        width: 50%;
+        display: none;
+        font-size: $fs-middle;
+        list-style-type: none;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+
+        @include mdSize {
+            display: flex;
+        }
+    }
+
+    &_menu-item {
+        opacity: 0;
+        transition: 2s;
+
+    }
+
+    &_menu.active li {
+        opacity: 1;
+    }
+
+
+    &_menu-item a {
+        color: $primary-color;
+        text-decoration: none;
+    }
+}
+
+.headline {
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+
+    @include smSize {
+        flex-direction: row;
+    }
+
+    &_textblock {
+        @include smSize {
+            width: 50%;
+            margin-top: 76px;
+        }
+    }
+
+    &_title {
+        color: $primary-color;
+        letter-spacing: 0.01em;
+        margin: 0;
+    }
+
+    &_description.active {
+        transition-delay: .1s;
+    }
+
+    &_description {
+        letter-spacing: -0.03em;
+        line-height: 28px;
+        margin: 20px 0 0 0;
+
+    }
+
+    &_btn {
+        width: 205px;
+        margin-top: 20px;
+    }
+
+    &_btn.active {
+        transition-delay: .2s;
+    }
+
+    &_img {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+
+        @include smSize {
+            width: 50%;
+        }
+    }
+
+    & .phoneImg {
+        @include lgSize {
+            width: 398px;
+        }
+    }
+}
+
+// === set delay menu====
+.header_menu.active {
+    li {
+        @for $i from 1 to 5 {
+            $delay: $i*0.2;
+
+            &:nth-child(#{$i}) {
+                @if $i==1 {
+                    transition-delay: 0;
+                }
+
+                @else {
+                    transition-delay: #{$delay+s};
+                }
+            }
+        }
+    }
+}
+
+// === MOBILE =====
+
+.mobileNav {
+    position: fixed;
+    align-items: center;
+    z-index: 1;
+    background: $deepBlue-color;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 14px 10px;
+    margin: 0;
+    list-style: none;
+
+    & a {
+        font-size: 20px;
+    }
+
+    @include mdSize {
+        display: none;
+    }
+
+    &_list {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        font-size: $fs-middle;
+        list-style-type: none;
+        padding: 0;
+        line-height: 40px;
+    }
+
+    &_list a {
+        color: $primary-color;
+        text-decoration: none;
+    }
+
+    &_btn {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        position: absolute;
+        // top: 11px;
+        right: 10px;
+        cursor: pointer;
+
+    }
+}
+
+
+
+.burgerTop,
+.burgerMiddle,
+.burgerBottom {
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: $primary-color;
+
+}
+
+.burgerTop,
+.burgerBottom {
+    content: '';
+}
+
+.burgerTop {
+    transform: translateY(-7px);
+}
+
+.burgerBottom {
+    transform: translateY(7px);
+}
+
+
+// ==== A N i M A T I O N ======
+
+//===== burger =====
+
+.mobileNav_btn-active .burgerMiddle {
+
+    animation: rotBtn .7s ease-in-out forwards;
+}
+
+.mobileNav_btn-active .burgerTop {
+    animation: rotBtn .7s ease-in-out forwards;
+}
+
+.mobileNav_btn-active .burgerBottom {
+    animation: rotBtnRevese .7s ease-in-out forwards;
+}
+
+@keyframes rotBtn {
+    50% {
+        transform: translateY(0);
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes rotBtnRevese {
+    50% {
+        transform: translateY(0);
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+
+// ====Button=====
+
+.btnText.active {
+    transition-delay: .2s;
+}
+
+// ==== Arrow move up =====
+
+.wrapperArrow.active {
+    transition-delay: .4s;
+}
+
+.wrapperArrow {
+    display: flex;
+    align-items: center;
+}
+
+//==== arrow hover animation ===
+.headline_btn:hover .wrapperArrow {
+
+    animation: hoverArrow .5s ease-in infinite alternate;
+}
+
+@keyframes hoverArrow {
+    100% {
+        transform: translateX(15px);
+    }
+}
+
+// === arrow rotation ===
+#openArrow1 {
+    transform-origin: right;
+    transform: rotate(-45deg);
+    transition: 1s ease-in-out .7s;
+}
+
+#openArrow2 {
+    transform-origin: right;
+    transform: rotate(45deg);
+    transition: 1s ease-in-out .7s;
+}
+
+.wrapperArrow.active #openArrow1,
+.wrapperArrow.active #openArrow2 {
+    transform: rotate(0);
+}
+
+
+// ===PHONE=====
+
+.phoneImg {
+    width: 248px;
+    opacity: 0;
+    transform: translate(0, 100px);
+    // animation: phoneUp 2s ease forwards;
+    transition: all 1s ease-out .2s;
+}
+
+.headline_img.active .phoneImg {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+// ==== Mobile Nav ===
+.mobileNav-item {
+    opacity: 0;
+    transition: all 1s;
+}
+
+.mobileNav_list.active .mobileNav-item {
+    animation: mobileNavAnim 1s ease-in-out forwards;
+}
+
+@keyframes mobileNavAnim {
+    100% {
+        opacity: 1;
+    }
+}
+
+.mobileNav_list.active {
+    li {
+        @for $i from 1 to 5 {
+            $delay: $i * .1;
+            &:nth-child(#{$i}){
+                @if $i == 1 {animation-duration: 0;}
+                @else {animation-delay: #{$delay + s};}
+
+            }
+        }
+    }
+}

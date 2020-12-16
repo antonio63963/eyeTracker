@@ -1,0 +1,27 @@
+
+@mixin  xLgSize {
+    @media screen and(min-width: 1140px){
+        @content;
+    }
+    
+}
+@mixin lgSize {
+    @media screen and (min-width: 961px) {
+        @content;
+    }
+}
+@mixin  mdSize {
+    @media screen and (min-width: 720px) {
+        @content;
+    }
+}
+@mixin  smSize {
+    @media screen and (min-width: 540px) {
+        @content;
+    }
+}
+@mixin  xSmSize {
+    @media screen and (max-width: 320px) {
+        @content;
+    }
+}

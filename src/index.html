@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Eye Tracker</title>
+
+</head>
+
+<body>
+
+    <div id="header" class="topBG">
+        <section class="content">
+            <section class="topSection">
+                <header class="header">
+                    <div class="header_logo-block">
+                        <img src="images/LogoEye.svg" alt="logo" class="logo-img">
+                        <img src="images/logoText.svg" alt="" class="logo-text">
+                    </div>
+
+
+                    <div class="burger-btn">
+                        <div class="burgerTop"></div>
+                        <div class="burgerMiddle"></div>
+                        <div class="burgerBottom"></div>
+                    </div>
+
+                    <ul class="header_menu">
+                        <li class="header_menu-item"><a href="#important">About</a></li>
+                        <li class="header_menu-item"><a href="#processing">How it works</a></li>
+                        <li class="header_menu-item"><a href="#download">Download</a></li>
+                        <li class="header_menu-item"><a href="#contacts">Contact us</a></li>
+                    </ul>
+                </header>
+                <section class="headline">
+                    <div class="headline_textblock">
+                        <h1 class="headline_title moveUpStart">Eye movement evaluation</h1>
+                        <p class="headline_description moveUpStart">
+                            The application main function is tracking the speed and coordinates of eye pupils via
+                            the
+                            mobile
+                            device camera.
+                        </p>
+                        <a type="botton" href="#download" class="headline_btn btn moveUpStart">
+                            <span class="btnText moveUpStart">Download</span>
+                            <div class="wrapperArrow moveUpStart">
+                                <svg class="arrowBtn" width="24" height="18" stroke="#FFF" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    x="0px" y="0px" viewBox="0 0 24 18" style="enable-background:new 0 0 24 18;"
+                                    xml:space="preserve">
+                                    <style type="text/css">
+                                        .stArrow {
+                                            fill: none;
+                                            stroke: #FFF;
+                                            stroke-width: 2;
+                                            stroke-linecap: round;
+                                            stroke-linejoin: round;
+                                            stroke-miterlimit: 10;
+                                        }
+                                    </style>
+                                    <line id="trunkArrow" class="stArrow" x1="1" y1="9" x2="22.9" y2="9" />
+
+                                    <polyline id="openArrow1" class="stArrow" points="15.7,1.9 22.9,9  " />
+                                    <polyline id="openArrow2" class="stArrow" points=" 22.9,9 15.7,16.1 " />
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="headline_img">
+                        <img src="images/phone.png" alt="phone pic" class="phoneImg">
+                    </div>
+
+                </section>
+            </section>
+
+        </section>
+    </div>
+    <!-- IMPORTANT TO KNOW -->
+
+    <section id="important" class="content important">
+        <h2 class="important_title moveUpStart">This is important to know</h2>
+        <setion class="important_description">
+            <div class="important_block">
+                <div class="svgWrapper moveUpStart">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px" y="0px" viewBox="0 0 108 104" style="enable-background:new 0 0 89 104;"
+                        xml:space="preserve" fill="none">
+                        <path class="iconApp" style="stroke-dasharray: 320;"
+                            d="M84.199 52.262V5a3 3 0 00-3-3H24.372a3 3 0 00-3 3v3.283m0 37.696v46.597m62.827 0V99a3 3 0 01-3 3H24.372a3 3 0 01-3-3v-6.424m14.136-56.021h10.089a3 3 0 003-3V21.372m9.947 61.78v-11.66a3 3 0 013-3h3.807M21.37 92.576h43.98M2 29.226v5.376a3 3 0 003 3h21.749a3 3 0 003-3V15.09M2 29.225V11.283a3 3 0 013-3h21.749a3 3 0 013 3v3.806M2 29.225l8.9-7.853 6.283 5.759L29.75 15.089m35.602-2.094H29.749m52.356 56.544l13.089 7.33-13.09 7.33v-14.66zm-20.56-24.084h8.136a3 3 0 013 3v8.66a3 3 0 01-3 3h-8.136a3 3 0 01-3-3v-8.66a3 3 0 013-3zM38.508 83.153h8.136a3 3 0 003-3v-8.66a3 3 0 00-3-3h-8.136a3 3 0 00-3 3v8.66a3 3 0 003 3zm0-23.037h8.136a3 3 0 003-3v-8.66a3 3 0 00-3-3h-8.136a3 3 0 00-3 3v8.66a3 3 0 003 3zm23.036-23.56h8.137a3 3 0 003-3v-9.183a3 3 0 00-3-3h-8.136a3 3 0 00-3 3v9.183a3 3 0 003 3zm41.503 53.02v-24.89a3 3 0 00-3-3H75.681a3 3 0 00-3 3v24.89a3 3 0 003 3h24.366a3 3 0 003-3z"
+                            stroke="#1B3CC8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <p class="important_text moveUpStart">In the native application built with the OpenCV library
+                    integration.
+                </p>
+            </div>
+            <div class="important_block">
+                <div class="svgWrapper moveUpStart">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px" y="0px" viewBox="0 0 108 104" style="enable-background:new 0 0 108 104;"
+                        xml:space="preserve" fill="none">
+                        <path class="iconApp"
+                            d="M35.471 93.047V82.95m18.777 0v10.097m-33.94-51.954h-5.087c-1.46 0-2.644 1.202-2.644 2.686v10.896c0 1.483 1.184 2.686 2.644 2.686h5.087m48.852 0h5.088c1.46 0 2.644-1.203 2.644-2.686V43.78c0-1.484-1.184-2.686-2.644-2.686H69.16M15.053 2H3.294C2.58 2 2 2.59 2 3.315v11.943m85 0V3.315C87 2.588 86.42 2 85.706 2H73.948m0 100h11.758c.715 0 1.294-.589 1.294-1.315V88.742m-85 0v11.943c0 .727.58 1.315 1.295 1.315h11.758M44.86 16.433v6.16m0 8.425v6.16m0 7.96v6.16m3.866-9.86h6.063m7.637 0h6.287M44.86 60.059v6.16m0 8.652v6.16M21.39 41.438h6.064m7.157 0H40.9m3.96-29.17c-15.194 0-22.19 12.968-24.069 20.322a8.125 8.125 0 00-.23 2.02v28.214c0 .7.065 1.394.244 2.07 1.898 7.17 8.897 19.738 24.056 19.738 15.158 0 22.157-12.568 24.056-19.737.18-.677.244-1.372.244-2.071V34.61c0-.682-.062-1.359-.23-2.02-1.88-7.354-8.876-20.323-24.07-20.323z"
+                            stroke="#1B3CC8" stroke-width="3" stroke-linecap="round" /></svg>
+                </div>
+                <p class="important_text moveUpStart">The application is making approximately 1 photo of a patient's
+                    face
+                    with the 0.5 seconds frequency.</p>
+            </div>
+
+            <div class="important_block">
+                <div class="svgWrapper moveUpStart">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px" y="0px" viewBox="0 0 89 104" style="enable-background:new 0 0 89 104;"
+                        xml:space="preserve">
+
+                        <style type="text/css">
+                            .st0 {
+                                fill: none;
+                                stroke: #1B3CC8;
+                                stroke-width: 3;
+                                stroke-linecap: round;
+                                stroke-linejoin: round;
+                                stroke-miterlimit: 10;
+                            }
+                        </style>
+                        <path class="st0 iconApp" d="M64.6,67.7V20.1c0-1.7-1.4-3.1-3.1-3.1H41.6" />
+                        <path class="st0 iconApp"
+                            d="M17.9,41.4v55.7c0,1.7,1.4,3.1,3.1,3.1h40.4c1.7,0,3.1-1.4,3.1-3.1v-1.2" />
+                        <path class="st0 iconApp"
+                            d="M61.9,82.7L52.9,72c-2.1-2.4-1.8-6,0.6-8l0,0c2.4-2.1,6-1.8,8,0.6l13.5,15.6" />
+                        <path class="st0 iconApp" d="M69.7,100.2c-5.7-3.7-8.9-10.4-7.8-17.5" />
+                        <path class="st0 iconApp" d="M70.1,52.8l12,13.4c0,0,4.9,4.4,4.9,13.2s0,22.4,0,22.4" />
+                        <line class="st0 iconApp" x1="32.1" y1="61.7" x2="48.7" y2="61.7" />
+                        <polyline class="st0 iconApp" points="40.8,43.9 40.8,56.6 46.6,52.4 " />
+                        <line class="st0 iconApp" x1="34.5" y1="52.4" x2="40.8" y2="56.6" />
+                        <g id="Layer_2">
+                            <path class="st0 iconApp" d="M33.9,37.3H4.7c-1.6,0-2.9-1.3-2.9-2.9V5.2c0-1.6,1.3-2.9,2.9-2.9h29.2c1.6,0,2.9,1.3,2.9,2.9v29.2
+                           C36.8,36,35.5,37.3,33.9,37.3z" />
+                            <path class="st0 iconApp" d="M11,26c3.9-4.2,10.5-4.4,14.7-0.5" />
+                            <circle class="st0 iconApp" cx="18.8" cy="15.5" r="3.4" />
+                        </g>
+                    </svg>
+                </div>
+
+                <p class="important_text moveUpStart">The photos of the patient's face can also be uploaded and
+                    processed.
+                </p>
+            </div>
+
+            <div class="important_block">
+                <div class="svgWrapper <!-- moveUpStart -->">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px" y="0px" viewBox="0 0 105 110" style="enable-background:new 0 0 105 104;"
+                        xml:space="preserve">
+                        <style type="text/css">
+                            .st0 {
+                                fill: none;
+                                stroke: #1B3CC8;
+                                stroke-width: 3;
+                                stroke-miterlimit: 10;
+                            }
+
+                            .st1 {
+                                fill: none;
+                                stroke: #1B3CC8;
+                                stroke-width: 3;
+                                stroke-linecap: round;
+                                stroke-miterlimit: 10;
+                            }
+
+                            .st2 {
+                                fill: none;
+                                stroke: #1B3CC8;
+                                stroke-width: 3;
+                                stroke-linecap: round;
+                                stroke-linejoin: round;
+                                stroke-miterlimit: 10;
+                            }
+                        </style>
+                        <g id="_x23_phone">
+                            <path class="st0 iconApp" d="M73.5,102.4H28.8c-2.8,0-5.2-2.3-5.2-5.2V7.6c0-2.8,2.3-5.2,5.2-5.2h44.6c2.8,0,5.2,2.3,5.2,5.2v89.6
+                           C78.7,100.1,76.3,102.4,73.5,102.4z" />
+                            <path class="st0 iconApp"
+                                d="M36.6,2.4v5.4c0,1.3,1.1,2.4,2.4,2.4h24.4c1.3,0,2.4-1.1,2.4-2.4V2.4" />
+                            <line class="st1 iconApp" x1="43.7" y1="6.3" x2="51.1" y2="6.3" />
+                            <line class="st1 iconApp" x1="56.4" y1="6.3" x2="58.4" y2="6.3" />
+                        </g>
+                        <g id="_x23_arrows">
+                            <path class="st1 iconApp" d="M33.4,54c0-9.8,8-17.8,17.8-17.8c4.6,0,8.8,1.7,11.9,4.6" />
+                            <path class="st1 iconApp" d="M68.9,54c0,9.8-8,17.8-17.8,17.8c-4.7,0-9.1-1.9-12.2-4.9" />
+                            <polyline class="st2 iconApp" points="64.3,36.2 64.3,42.7 57.8,42.7 	" />
+                            <polyline class="st2 iconApp" points="37.3,71.7 37.3,65.3 43.7,65.3 	" />
+                        </g>
+                    </svg>
+                </div>
+                <p class="important_text moveUpStart">All the computing is processed on the native app side, with no
+                    back-end.</p>
+            </div>
+        </setion>
+    </section>
+
+    <!-- MEDICAL APP -->
+
+    <section class="medicalApp">
+
+        <div class="content">
+            <h2 class="medicalApp_title moveUpStart">Medical application for the eyes</h2>
+            <p class="medicalApp_description moveUpStart">This application is a demo version and is aimed at improving
+                the
+                diagnostic processes of ophthalmic analyzes. This application will support preliminary diagnostics on
+                angular velocity eye pupils measuring. </p>
+
+        </div>
+
+        <div class="medicalApp_wrapper-carousel">
+            <div class="medicalApp_carousel">
+                <div class="carousel-track">
+                    <div class="track-item"><img class="screenApp" src="images/carousel/android-001 1.png"
+                            alt="screen app"></div>
+                    <div class="track-item"><img class="screenApp" src="images/carousel/android-002 1.png"
+                            alt="screen app"></div>
+                    <div class="track-item"><img class="screenApp" src="images/carousel/iphone-002 1.png"
+                            alt="screen app"></div>
+                    <div class="track-item"> <img class="screenApp" src="images/carousel/iphone-003 1.png"
+                            alt="screen app"></div>
+                    <div class="track-item"><img class="screenApp" src="images/carousel/iphone-005 1.png"
+                            alt="screen app"></div>
+                </div>
+
+                <div class="carousel_btn-block">
+                    <div class="carousel-btn"></div>
+                    <div class="carousel-btn"></div>
+                    <div class="carousel-btn"></div>
+                    <div class="carousel-btn"></div>
+                    <div class="carousel-btn"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- SLICK -->
+        <!-- <div class="slider moveUpStart">
+            <div class="slider_item"><img src="images/carousel/android-001 1.png" alt="screen app">
+            </div>
+            <div class="slider_item"><img src="images/carousel/android-002 1.png" alt="screen app">
+            </div>
+            <div class="slider_item"><img src="images/carousel/iphone-002 1.png" alt="screen app">
+            </div>
+            <div class="slider_item"> <img src="images/carousel/iphone-003 1.png" alt="screen app">
+            </div>
+            <div class="slider_item"><img src="images/carousel/iphone-005 1.png" alt="screen app">
+            </div>
+        </div> -->
+    </section>
+
+    <!-- ALGORITHM -->
+    <section class="algorithmTheme">
+        <div class="content algorithmTheme_content">
+
+            <div class="algorithmTheme_textBlock">
+                <h2 class="algorithmTheme_title moveUpStart">Algorithm & processing
+                </h2>
+                <p class="algorithmTheme_description moveUpStart">Deselection of photos from series can sightly reduce
+                    eye-tracking
+                    algorithm accuracy. Perform this action only if you sure algorithm has failed to track an eye pupil
+                    correctly for one or more photos.</p>
+            </div>
+
+            <div class="algorithmTheme_graphicBlock">
+                <div class="wrapper-circle-info">
+                    <div class="graphicBlock-cirle-normal  circle-info moveUpStart">
+                        <div class="circle-normal-fill circle-info">
+                            <svg class="normal-fill" width="152" height="152" viewBox="0 0 150 150" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g>
+                                    <circle class="trimPathCircle1" cx="75" cy="75" r="72" fill="none" stroke="blue"
+                                        stroke-width="4" />
+                                </g>
+                            </svg>
+                        </div>
+
+                        <div class="cirlce-num moveUpStart"><span class="animNumbers">7</span>-<span class="animNumbers"">10</span>  </div>
+                        <span class=" cirlce-sec moveUpStart">sec</span>
+                        </div>
+                        <span class="algorithmTheme_info-description moveUpStart">Normal accuracy
+                        </span>
+                    </div>
+
+                    <div class="wrapper-circle-info">
+                        <div class="graphicBlock-cirle-high  circle-info moveUpStart">
+                            <div class="circle-high-fill circle-info">
+                                <svg class="high-fill" width="152" height="152" viewBox="0 0 150 150" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <circle class="trimPathCircle2" cx="75" cy="75" r="72" fill="none" stroke="blue"
+                                            stroke-width="4" />
+                                    </g>
+                                </svg>
+                            </div>
+
+                            <div class="cirlce-num moveUpStart"><span class="animNumbers">10</span>-<span
+                                    class="animNumbers"">15</span>  
+                        </div>
+                        <span class=" cirlce-sec moveUpStart">sec</span>
+
+                            </div>
+                            <span class="algorithmTheme_info-description moveUpStart">High accuracy
+                            </span>
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+    <!-- PHOTO PROCESSING -->
+
+    <section id="processing" class="photoProcessing">
+        <div class="content">
+            <div class="photoProcessing_header">
+                <h2 class="photoProcessing_title moveUpStart">Photo processing
+                    and process costs
+                </h2>
+                <p class="photoProcessing_description moveUpStart">Before starting the process of finding the
+                    coordinates of pupils, the taken or uploaded photos should be reduced to the minimum resolution in
+                    order to increase the speed of processing them by the OpenCV library</p>
+            </div>
+
+            <!-- steps -->
+
+            <div class="photoProcessing_steps-block">
+
+                <div class="photoProcessing_stepsList-left">
+
+                    <div class="step steps-even">
+                        <div class="step-textSide">
+                            <h2 class="steps-title moveLeft">Step2</h2>
+                            <p class="steps-text moveLeft">Make sure your head is not moving and positioned according to
+                                the guide lines on the screen of your phone</p>
+                        </div>
+                        <!-- <div class="step-graphSide moveUpStart">
+                            <div class="steps-circle">
+                                <div class="circle-inner"></div>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <div class="step steps-even">
+                        <div class="step-textSide">
+                            <h2 class="steps-title moveLeft">Step4</h2>
+                            <p class="steps-text moveLeft">Deselection of photos from series can sightly reduce
+                                eye-tracking algorithm accuracy. Perform this action only if you sure algorithm has
+                                failed to track an eye pupil correctly for one or more photos</p>
+                        </div>
+                        <div class="step-graphSide moveUpStart">
+                            <!-- <div class="steps-circle">
+                                <div class="circle-inner"></div>
+                            </div>
+                            <div class="steps-line"></div> -->
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- circles & line -->
+
+                <div class="steps-graphic">
+                    <div class="graphic-inner-wrapper moveUpStart">
+                        <div class="wrapper-steps-circle">
+                            <div class="steps-circle">
+                                <div class="circle-inner"></div>
+                            </div>
+                            <div class="steps-circle moveUpStart">
+                                <div class="circle-inner"></div>
+                            </div>
+                            <div class="steps-circle moveUpStart">
+                                <div class="circle-inner"></div>
+                            </div>
+                            <div class="steps-circle moveUpStart">
+                                <div class="circle-inner"></div>
+                            </div>
+                            <div class="steps-circle moveUpStart">
+                                <div class="circle-inner"></div>
+                            </div>
+                        </div>
+                        <div class="steps-line"></div>
+                    </div>
+                </div>
+                <div class="photoProcessing_stepsList-right">
+
+                    <div class="step steps-odd">
+                        <div class="step-graphSide moveUpStart">
+                            <div class="steps-circle">
+                                <div class="circle-inner"></div>
+                            </div>
+                        </div>
+                        <div class="step-textSide">
+                            <h2 class="steps-title moveRight">Step1</h2>
+                            <p class="steps-text moveRight">To improve the quality of results please make sure your
+                                phone if immobilized and not moving during the photoshoot.</p>
+                        </div>
+                    </div>
+
+                    <div class="step steps-even">
+                        <div class="step-graphSide moveUpStart">
+                            <div class="steps-circle">
+                                <div class="circle-inner"></div>
+                            </div>
+                        </div>
+                        <div class="step-textSide">
+                            <h2 class="steps-title moveRight">Step2</h2>
+                            <p class="steps-text moveRight">Make sure your head is not moving and positioned according
+                                to the guide lines on the screen of your phone</p>
+                        </div>
+                    </div>
+
+                    <div class="step steps-odd">
+                        <div class="step-graphSide moveUpStart">
+                            <div class="steps-circle">
+                                <div class="circle-inner"></div>
+                            </div>
+                        </div>
+                        <div class="step-textSide">
+                            <h2 class="steps-title moveRight">Step3</h2>
+                            <p class="steps-text moveRight">Take a photoshoot in a well-lit environment, make sure there
+                                are no glares on the pupils and the screen of the phone.</p>
+                        </div>
+                    </div>
+
+                    <div class="step steps-even">
+                        <div class="step-graphSide moveUpStart">
+                            <div class="steps-circle">
+                                <div class="circle-inner"></div>
+                            </div>
+                        </div>
+                        <div class="step-textSide">
+                            <h2 class="steps-title moveRight">Step4</h2>
+                            <p class="steps-text moveRight">Deselection of photos from series can sightly reduce
+                                eye-tracking algorithm accuracy. Perform this action only if you sure algorithm has
+                                failed to track an eye pupil correctly for one or more photos</p>
+                        </div>
+                    </div>
+
+                    <div class="step steps-odd">
+                        <div class="step-graphSide moveUpStart">
+                            <div class="steps-circle">
+                                <div class="circle-inner"></div>
+                            </div>
+                        </div>
+                        <div class="step-textSide">
+                            <h2 class="steps-title moveRight">Step5</h2>
+                            <p class="steps-text moveRight">Take a photoshoot in a well-lit environment, make sure there
+                                are no glares on the pupils and the screen of the phone.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- <div class="steps-line"></div> -->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- AVAILIBLE -->
+
+    <div id="download" class="availible-bg">
+        <section class="availible content">
+            <h2 class="availible_title moveUpStart">Available on Android and IOS</h2>
+            <p class="availible_description moveUpStart">As a result, the application is building the graphics with the
+                eye position which allows a doctor to make a conclusion with ease. EyeTracker stores the doctor
+                registration data and a list of his patients with their medical data. </p>
+            <div class="availible_buttons moveUpStart">
+                <a class="googlePlay-btn mobileBtn" type="button"
+                    href="https://play.google.com/store/apps/details?id=com.bvgsoftwaregroup.eyetracker"></a>
+                <a type="button" href="https://apps.apple.com/us/app/eyetracker/id1443854106"
+                    class="appStore-btn mobileBtn"></a>
+            </div>
+        </section>
+    </div>
+
+    <!-- CONTACT -->
+
+    <section id="contacts" class="contactUs">
+        <div class="contactUs_content content">
+            <div class="contactUs_header">
+                <h2 class="contactUs_title">Contact us</h2>
+                <p class="contactUs_description">The main purpose of EyeTracker is help saving the time of medical
+                    observation and identification of eye problems.</p>
+            </div>
+
+            <form action="" class="form">
+                <input type="text" name="userName" id="name" class="moveUpStart" placeholder="Name*" required>
+                <input type="text" name="userEmail" id="email" class="moveUpStart" placeholder="Email*" required>
+                <textarea name="userMessage" id="message" class="moveUpStart" cols="30" rows="10"
+                    placeholder="Message*"></textarea>
+
+                <button type="submit" class="submitBtn btn moveUpStart">
+                    <span class="btnText moveUpStart">Send</span>
+                    <div class="wrapperArrow moveUpStart">
+                        <svg class="arrowBtn" width="24" height="18" stroke="#FFF" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                            y="0px" viewBox="0 0 24 18" style="enable-background:new 0 0 24 18;" xml:space="preserve">
+                            <style type="text/css">
+                                .stArrow {
+                                    fill: none;
+                                    stroke: #FFF;
+                                    stroke-width: 2;
+                                    stroke-linecap: round;
+                                    stroke-linejoin: round;
+                                    stroke-miterlimit: 10;
+                                }
+                            </style>
+                            <line id="trunkArrow" class="stArrow" x1="1" y1="9" x2="22.9" y2="9" />
+
+                            <polyline id="openArrow1" class="stArrow" points="15.7,1.9 22.9,9  " />
+                            <polyline id="openArrow2" class="stArrow" points=" 22.9,9 15.7,16.1 " />
+                        </svg>
+                    </div>
+                </button>
+            </form>
+
+        </div>
+
+        <footer class="footer">
+
+            <div class="content footer_content">
+                <nav class="footer_navigation">
+                    <div class="footer-linksBlock">
+                        <a href="#important" class="link">About</a>
+                        <a href="#processing" class="link">How it works</a>
+                    </div>
+                    <div class="footer-linksBlock">
+                        <a href="#download" class="link">Download</a>
+                        <a href="#header" class="link">Privacy policy</a>
+                    </div>
+                </nav>
+                <a href="" class="footer_contactEmail link">
+                    Email: business@bvgsoftwaregroup.com
+                </a>
+                <p class="footer_copyright">© 2011 - 2019 Copyright BVG Software Group. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </section>
+
+    <!-- mobile navigation  -->
+
+    <section class="hideElem mobileNav">
+
+        <div class=" mobileNav_btn">
+            <div class="burgerTop"></div>
+            <div class="burgerMiddle"></div>
+            <div class="burgerBottom"></div>
+        </div>
+
+
+        <ul class="mobileNav_list">
+            <li class="mobileNav-item"><a href="#important">About</a></li>
+            <li class="mobileNav-item"><a href="#">How it works</a></li>
+            <li class="mobileNav-item"><a href="#">Download</a></li>
+            <li class="mobileNav-item"><a href="#">Contact us</a></li>
+        </ul>
+    </section>
+
+    <script src="js/slider.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
