@@ -375,7 +375,7 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 28px;
-  letter-spacing: 0, 3em;
+  letter-spacing: -0.03em;
 }
 @media screen and (min-width: 540px) {
   .medicalApp_description {
@@ -1000,7 +1000,7 @@
 }
 
 .availible-bg {
-  background: url(/src/images/bg/bubblesTopTogether2.svg) no-repeat center top;
+  background: url(/src/images/bg/bubblesTopTogether2.svg) no-repeat center top/cover;
 }
 
 .availible {
@@ -1337,7 +1337,7 @@ h2 {
     font-style: normal;
     font-weight: 700;
     line-height: 60px;
-    letter-spacing: 0, 1em;
+    letter-spacing: 0.01em;
   }
 }
 
