@@ -55,7 +55,7 @@
 }
 
 .googlePlay-btn {
-    background: url('src/images/icons/google-play.svg') no-repeat center / cover;
+    background: url('/src/images/icons/google-play.svg') no-repeat center / cover;
     width: 135px;
     @include lgSize{
         width: 202.5px;
@@ -63,7 +63,7 @@
 }
 
 .appStore-btn {
-    background: url('src/images/icons/app-store.svg') no-repeat center / cover;
+    background: url('/src/images/icons/app-store.svg') no-repeat center / cover;
     width: 120px;
     margin-left: 10px;
     @include lgSize{

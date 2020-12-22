@@ -273,47 +273,58 @@
                     correctly for one or more photos.</p>
             </div>
 
-            <div class="algorithmTheme_graphicBlock">
-                <div class="wrapper-circle-info">
-                    <div class="graphicBlock-cirle-normal  circle-info moveUpStart">
-                        <div class="circle-normal-fill circle-info">
-                            <svg class="normal-fill" width="152" height="152" viewBox="0 0 150 150" fill="none"
+            <div class="graphBlock">
+                <!-- first block -->
+                <div class="graphBlock_first">
+                    <div class="first_block-wrapper moveUpStart">
+                        <div class="draw-circle">
+                            <svg class="normal-fill" viewBox="0 0 150 150" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
-                                <g>
-                                    <circle class="trimPathCircle1" cx="75" cy="75" r="72" fill="none" stroke="blue"
-                                        stroke-width="4" />
-                                </g>
+
+                                <circle class="trimPathCircle1" cx="75" cy="75" r="72" fill="none" stroke="blue"
+                                    stroke-width="4" />
+
                             </svg>
                         </div>
+                        <div class="basse-circle">
+                            <div class="cirlce-num moveUpStart">
+                                <span class="animNumbers">7</span>-<span class="animNumbers"">10</span>  
+                                </div>
+                                <span class=" cirlce-sec moveUpStart">sec</span>
 
-                        <div class="cirlce-num moveUpStart"><span class="animNumbers">7</span>-<span class="animNumbers"">10</span>  </div>
-                        <span class=" cirlce-sec moveUpStart">sec</span>
+                            </div>
                         </div>
+
                         <span class="algorithmTheme_info-description moveUpStart">Normal accuracy
                         </span>
                     </div>
 
-                    <div class="wrapper-circle-info">
-                        <div class="graphicBlock-cirle-high  circle-info moveUpStart">
-                            <div class="circle-high-fill circle-info">
-                                <svg class="high-fill" width="152" height="152" viewBox="0 0 150 150" fill="none"
+                    <!-- second block -->
+
+                    <div class="graphBlock_second">
+                        <div class="second_block-wrapper moveUpStart">
+                            <div class="draw-circle">
+                                <svg class="normal-fill" viewBox="0 0 150 150" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
-                                    <g>
-                                        <circle class="trimPathCircle2" cx="75" cy="75" r="72" fill="none" stroke="blue"
-                                            stroke-width="4" />
-                                    </g>
+
+                                    <circle class="trimPathCircle2" cx="75" cy="75" r="72" fill="none" stroke="blue"
+                                        stroke-width="4" />
+
                                 </svg>
                             </div>
+                            <div class="basse-circle">
+                                <div class="cirlce-num moveUpStart">
+                                    <span class="animNumbers">10</span>-<span class="animNumbers"">15</span>  
+                                </div>
+                                <span class=" cirlce-sec moveUpStart">sec</span>
 
-                            <div class="cirlce-num moveUpStart"><span class="animNumbers">10</span>-<span
-                                    class="animNumbers"">15</span>  
-                        </div>
-                        <span class=" cirlce-sec moveUpStart">sec</span>
-
+                                </div>
                             </div>
+
                             <span class="algorithmTheme_info-description moveUpStart">High accuracy
                             </span>
                         </div>
+
                     </div>
                 </div>
     </section>
@@ -493,36 +504,43 @@
                     observation and identification of eye problems.</p>
             </div>
 
-            <form action="" class="form">
-                <input type="text" name="userName" id="name" class="moveUpStart" placeholder="Name*" required>
-                <input type="text" name="userEmail" id="email" class="moveUpStart" placeholder="Email*" required>
-                <textarea name="userMessage" id="message" class="moveUpStart" cols="30" rows="10"
-                    placeholder="Message*"></textarea>
-
-                <button type="submit" class="submitBtn btn moveUpStart">
-                    <span class="btnText moveUpStart">Send</span>
-                    <div class="wrapperArrow moveUpStart">
-                        <svg class="arrowBtn" width="24" height="18" stroke="#FFF" version="1.1"
-                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                            y="0px" viewBox="0 0 24 18" style="enable-background:new 0 0 24 18;" xml:space="preserve">
-                            <style type="text/css">
-                                .stArrow {
-                                    fill: none;
-                                    stroke: #FFF;
-                                    stroke-width: 2;
-                                    stroke-linecap: round;
-                                    stroke-linejoin: round;
-                                    stroke-miterlimit: 10;
-                                }
-                            </style>
-                            <line id="trunkArrow" class="stArrow" x1="1" y1="9" x2="22.9" y2="9" />
-
-                            <polyline id="openArrow1" class="stArrow" points="15.7,1.9 22.9,9  " />
-                            <polyline id="openArrow2" class="stArrow" points=" 22.9,9 15.7,16.1 " />
-                        </svg>
+          <div class="formWrapper">
+                <form action="" class="form">
+                    <input type="text" name="userName" id="name" class="moveUpStart" placeholder="Name*" required>
+                    <input type="text" name="userEmail" id="email" class="moveUpStart" placeholder="Email*" required>
+                    <textarea name="userMessage" id="message" class="moveUpStart" cols="30" rows="10"
+                        placeholder="Message*" required></textarea>
+    
+                    <button type="submit" class="submitBtn btn moveUpStart">
+                        <span class="btnText moveUpStart">Send</span>
+                        <div class="wrapperArrow moveUpStart">
+                            <svg class="arrowBtn" width="24" height="18" stroke="#FFF" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                y="0px" viewBox="0 0 24 18" style="enable-background:new 0 0 24 18;" xml:space="preserve">
+                                <style type="text/css">
+                                    .stArrow {
+                                        fill: none;
+                                        stroke: #FFF;
+                                        stroke-width: 2;
+                                        stroke-linecap: round;
+                                        stroke-linejoin: round;
+                                        stroke-miterlimit: 10;
+                                    }
+                                </style>
+                                <line id="trunkArrow" class="stArrow" x1="1" y1="9" x2="22.9" y2="9" />
+    
+                                <polyline id="openArrow1" class="stArrow" points="15.7,1.9 22.9,9  " />
+                                <polyline id="openArrow2" class="stArrow" points=" 22.9,9 15.7,16.1 " />
+                            </svg>
+                        </div>
+                    </button>
+                </form>
+                <div class="form-popUp hideElem">
+                    <div class="textWrapper">
+                        <h3 class="alertText">adsfasdfds</h3>
                     </div>
-                </button>
-            </form>
+                </div>
+          </div>
 
         </div>
 
@@ -560,10 +578,10 @@
 
 
         <ul class="mobileNav_list">
-            <li class="mobileNav-item"><a href="#important">About</a></li>
-            <li class="mobileNav-item"><a href="#">How it works</a></li>
-            <li class="mobileNav-item"><a href="#">Download</a></li>
-            <li class="mobileNav-item"><a href="#">Contact us</a></li>
+            <li class="mobileNav-item"><a class="mobile-link" href="#important">About</a></li>
+            <li class="mobileNav-item"><a class="mobile-link" href="#processing">How it works</a></li>
+            <li class="mobileNav-item"><a class="mobile-link" href="#download">Download</a></li>
+            <li class="mobileNav-item"><a class="mobile-link" href="#contacts">Contact us</a></li>
         </ul>
     </section>
 

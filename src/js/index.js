@@ -4,6 +4,7 @@ const animItemsPseudo = document.querySelectorAll('.moveUpStart, .headline_img, 
 const imgUp = document.querySelector('.headline_img');
 const headerMenu = document.querySelector('.header_menu');
 const animItemsArray = [...animItemsPseudo];
+console.log(animItemsPseudo);
 
 animItemsArray.unshift(imgUp);
 animItemsArray.unshift(headerMenu);
@@ -57,13 +58,13 @@ function getCords(el) {
 
 const topSection = document.querySelector('.topSection');
 const mobileNav = document.querySelector('.mobileNav');
-const burgerBtnMobile = document.querySelector('.mobileNav_btn');
+const burgerBtnMobile = mobileNav.querySelector('.mobileNav_btn');
 const burgerBtnHeader = document.querySelector('.burger-btn');
-const mobileNavList = document.querySelector('.mobileNav_list');
+const mobileNavList = mobileNav.querySelector('.mobileNav_list');
 
 
 burgerBtnHeader.addEventListener('click', showMenu);
-burgerBtnMobile.addEventListener('click', morphingBtn);
+mobileNav.addEventListener('click', closeMenu);
 
 function showMenu() {
     mobileNav.classList.add('mobileNav_btn-active');
@@ -73,30 +74,21 @@ function showMenu() {
     mobileNavList.classList.add('active');
 }
 
-function morphingBtn() {
-    mobileNav.classList.remove('mobileNav_btn-active');
-    mobileNav.classList.remove('mobileNav_btn-activeRot');
-    mobileNav.classList.add('hideElem');
-    topSection.classList.remove('hideElem');
-    mobileNavList.classList.remove('active');
+function closeMenu(event) {
+
+    if (event.target == burgerBtnMobile || event.target.classList.contains('mobile-link')) {
+        mobileNav.classList.remove('mobileNav_btn-active');
+        mobileNav.classList.remove('mobileNav_btn-activeRot');
+        mobileNav.classList.add('hideElem');
+        topSection.classList.remove('hideElem');
+        mobileNavList.classList.remove('active');
+    } else {
+        return false;
+    }
 }
 
 
-//  ==== SLICK SETTINGS====
-
-// $(document).ready(function () {
-
-//     $('.slider').slick({
-//         arrows: false,
-//         dots: true,
-//         slidesToShow: 3,
-//         slideToScroll: 1,
-//         infinite: true,
-//         initialSlide: 2,
-//         variableWidth: true,
-//         centerMode: true,
-//     });
-// });
+//  ==== for algorithm part animation numbers ====
 
 function getIncreaseNum(startNum, elem) {
     let num = startNum;
@@ -113,27 +105,60 @@ function getIncreaseNum(startNum, elem) {
 
 // === input validation ====
 
-const inputName = document.getElementsByName('userName'),
-    inputEmail = document.getElementsByName('userEmail'),
-    inputMessage = document.getElementsByName('userMessage'),
-    submitBtn = document.querySelector('.submitBtn'),
-    inputsArr = document.querySelectorAll('input, textarea');
-// form = document.querySelector('.form');
-// console.log(inputsArr);
+const form = document.querySelector('.form'),
+    inputName = form.querySelector('#name'),
+    inputEmail = form.querySelector('#email'),
+    inputMessage = form.querySelector('#message'),
+    submitBtn = form.querySelector('.submitBtn'),
+    inputsArr = form.querySelectorAll('input, textarea'),
+    formPopUp = document.querySelector('.form-popUp'),
+    alertText = formPopUp.querySelector('.alertText');
 
 
 submitBtn.addEventListener('click', submitHandler);
+formPopUp.onclick = () => {
+    formPopUp.classList.add('hideElem');
+    form.classList.remove('blur');
+};
 
 function submitHandler(e) {
+    e.preventDefault();
+    let postString = '';
 
-    const isEmpty = ![...inputsArr].every(item => item.value);
-    console.log(isEmpty);
-    // if(isEmpty) 
-    fetch('url', {
-        method: 'POST',
-    }).then(res)
-    
+    const reg = /^[0-9a-z-\.]+\@[0-9a-z-]{2,}\.[a-z]{2,}$/i;
+    const isValid = inputEmail.value.match(reg) ? true : false;
+    const isEmpty = [...inputsArr].every(item => item.value);
+
+    if (!isEmpty) {
+        showPopUp('Please, fill in all the neccessary fields!*');
+    } else if (!isValid) {
+        showPopUp('Please, enter correct email!*');
+    } else {
+        postString += `name=${inputName.value}&email=${inputEmail.value}&message=${inputMessage.value}`;
+
+        fetch('url', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: postString,
+            }).then(resp => resp.text())
+            .then(data => {
+                showPopUp('Success! Please check your email!');
+                console.log('data: ', data);
+            })
+            .catch(err => {
+                showPopUp('Sorry! Something was going wrong(( Please try again.');
+                console.log('error: ', err);
+
+            });
+        [...inputsArr].forEach(item => item.value = '');
+    }
+
 }
 
-
-// submitHandler()
+function showPopUp(text) {
+    formPopUp.classList.remove('hideElem');
+    alertText.textContent = text;
+    form.classList.add('blur');
+}

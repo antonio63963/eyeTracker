@@ -8,7 +8,7 @@
   max-width: 100%;
   width: 1613px;
   height: 1101px;
-  background: url('images/bg/bubblesTopTogether.svg') center, url('images/bg/BGMiddle1.svg') no-repeat center top / cover;
+  background: url('images/bg/bubblesTopTogether.svg') center -25px / cover, url('images/bg/BGMiddle1.svg') no-repeat center top / cover;
 
   display: flex;
   flex-direction: column;
@@ -141,6 +141,7 @@
 }
 
 .carousel-btn {
+  cursor: pointer;
   width: 15px;
   height: 15px;
   background-color: $primary-color;

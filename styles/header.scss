@@ -21,6 +21,7 @@
     height: 24px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 
     @include mdSize {
         display: none;
@@ -370,9 +371,15 @@
     li {
         @for $i from 1 to 5 {
             $delay: $i * .1;
-            &:nth-child(#{$i}){
-                @if $i == 1 {animation-duration: 0;}
-                @else {animation-delay: #{$delay + s};}
+
+            &:nth-child(#{$i}) {
+                @if $i==1 {
+                    animation-duration: 0;
+                }
+
+                @else {
+                    animation-delay: #{$delay + s};
+                }
 
             }
         }

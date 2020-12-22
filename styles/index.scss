@@ -34,14 +34,17 @@ a {
 .topBG {
     display: flex;
     justify-content: center;
-    flex-grow: 1;
+    // flex-grow: 1;
     background:
-        url('images/bg/bubblesTopTogether.svg')no-repeat center -150px,
-        url(../src/images/bg/srcBGupWave-min.svg) no-repeat center bottom;
+        url('images/bg/bubblesTopTogether.svg')no-repeat center 100px / cover,
+        url(../src/images/bg/srcBGupWave-min.svg) no-repeat center -100px / cover;
+        // background-size: cover;
 
     max-width: 100%;
-    height: 986px;
+   width: 2400px;
+   height: 986px;
     position: relative;
+    margin: 0 auto;
 
 }
 
@@ -138,4 +141,8 @@ a:visited {
 .moveLeft.active {
     transform: translate(0, 0);
     opacity: 1;
+}
+
+.blur {
+    filter: blur(5px);
 }
