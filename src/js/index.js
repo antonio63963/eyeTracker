@@ -4,7 +4,7 @@ const animItemsPseudo = document.querySelectorAll('.moveUpStart, .headline_img, 
 const imgUp = document.querySelector('.headline_img');
 const headerMenu = document.querySelector('.header_menu');
 const animItemsArray = [...animItemsPseudo];
-console.log(animItemsPseudo);
+
 
 animItemsArray.unshift(imgUp);
 animItemsArray.unshift(headerMenu);

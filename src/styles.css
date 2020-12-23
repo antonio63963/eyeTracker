@@ -1000,7 +1000,7 @@
 }
 
 .availible-bg {
-  background: url(/src/images/bg/bubblesTopTogether2.svg) no-repeat center top/cover;
+  background: url("images/bg/bubblesTopTogether2.svg") no-repeat center top/cover;
 }
 
 .availible {
@@ -1052,7 +1052,7 @@
 }
 
 .googlePlay-btn {
-  background: url("/src/images/icons/google-play.svg") no-repeat center/cover;
+  background: url("images/icons/app-store.svg") no-repeat center/contain;
   width: 135px;
 }
 @media screen and (min-width: 961px) {
@@ -1062,7 +1062,7 @@
 }
 
 .appStore-btn {
-  background: url("/src/images/icons/app-store.svg") no-repeat center/cover;
+  background: url("images/icons/app-store.svg") no-repeat center/contain;
   width: 120px;
   margin-left: 10px;
 }
@@ -1389,7 +1389,7 @@ a:visited {
 }
 
 .moveUpStart {
-  transform: translateY(25px);
+  transform: translate3d(0, 25px, 0);
   opacity: 0;
   transition: all 1s;
 }
@@ -1397,7 +1397,7 @@ a:visited {
 .moveUpStart.active,
 .moveRight.active,
 .moveLeft.active {
-  transform: translate(0, 0);
+  transform: translate3d(0, 0, 0);
   opacity: 1;
 }
 

@@ -1,5 +1,5 @@
 .availible-bg {
-    background: url(/src/images/bg/bubblesTopTogether2.svg) no-repeat center top / cover;
+    background: url('images/bg/bubblesTopTogether2.svg') no-repeat center top / cover;
 }
 
 .availible {
@@ -55,7 +55,7 @@
 }
 
 .googlePlay-btn {
-    background: url('/src/images/icons/google-play.svg') no-repeat center / cover;
+    background: url('images/icons/app-store.svg')no-repeat center / contain;
     width: 135px;
     @include lgSize{
         width: 202.5px;
@@ -63,7 +63,7 @@
 }
 
 .appStore-btn {
-    background: url('/src/images/icons/app-store.svg') no-repeat center / cover;
+    background: url('images/icons/app-store.svg') no-repeat center / contain;
     width: 120px;
     margin-left: 10px;
     @include lgSize{
