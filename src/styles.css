@@ -653,11 +653,11 @@
   justify-content: space-between;
   width: 100%;
   margin: 0 auto;
+  max-width: 346px;
 }
 @media screen and (min-width: 720px) {
   .graphBlock {
     width: 50%;
-    max-width: 540px;
     margin: auto 0 0 30px;
   }
 }
