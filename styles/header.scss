@@ -240,11 +240,11 @@
 }
 
 .burgerTop {
-    transform: translateY(-7px);
+    transform: translate3d(0, -7px, 0);
 }
 
 .burgerBottom {
-    transform: translateY(7px);
+    transform: translate3d(0, 7px, 0);
 }
 
 
@@ -267,7 +267,7 @@
 
 @keyframes rotBtn {
     50% {
-        transform: translateY(0);
+        transform: translate3d(0, 0, 0);
         transform: rotate(0);
     }
 
@@ -278,7 +278,7 @@
 
 @keyframes rotBtnRevese {
     50% {
-        transform: translateY(0);
+        transform: translate3d(0, 0, 0);
         transform: rotate(0);
     }
 

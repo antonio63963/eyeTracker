@@ -169,24 +169,24 @@
 // == animation classes ===
 .steps-title.moveRight {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translate3d(100px, 0, 0);
     transition: 1s ease-in-out;
 }
 .steps-text.moveRight {
     opacity: 0;
-    transform: translateX(50px);
+    transform: translate3d(50px, 0, 0);
     transition: 1s ease-in-out;
 }
 
 .steps-title.moveLeft {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translate3d(-100px, 0, 0);
     transition: 1s ease-in-out;
 }
 
 .steps-text.moveLeft {
     opacity: 0;
-    transform: translateX(-50px);
+    transform: translate3d(-50px, 0, 0);
     transition: 1s ease-in-out;
 }
 
@@ -286,5 +286,5 @@
 
 .steps-graphic .moveUpStart {
     opacity: 10;
-    transform: translateY(35px);
+    transform: translate3d(0, 35px, 0);
 }

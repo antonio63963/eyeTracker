@@ -105,10 +105,6 @@
 // ///====================
 .carousel-track {
   display: flex;
-  // width: 2570px;
-
-  // padding: 0 50px;
-  // overflow-x: auto;
   cursor: grabbing;
   user-select: none;
 }
@@ -153,91 +149,5 @@
   opacity: 0.5;
 }
 
-// ===== SLICK ==========
-
-// .slider {
-//   max-width: 100%;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   margin: 30px auto;
-//   overflow: hidden;
-//   @include lgSize {
-//     margin: 107px auto;
-//   }
-//   @include mdSize {
-//     margin: 50px auto;
-//   }
-// }
-
-// .slider img {
-//   max-width: 100%;
-// }
-
-// .slider.slick-slider {
-
-// }
-
-// .slider .slick-list {
-//   max-width: 1920px;
-//   min-width: 320px;
-//   // overflow: hidden;
-
-//   // margin: 0 auto;
-
-//   display: flex;
-
-// }
-// .slider .slick-track {
-//   display: flex;
-//   margin: 0 auto;
-
-// }
-
-
-
-
-// .slider .slider_item {
-//   text-align: center;
-//   display: flex;
-//   margin: 0 50px;
-//   width: 251px;
-
-//   @include lgSize {
-//     height: 800px;
-//     min-width: 384px;
-//   }
-// }
-
-// .slider .slider_item img {
-//   margin: 0 auto;
-
-// }
-
-// .slick-dots {
-//   list-style: none;
-//   display: flex;
-//   align-items: center;
-//   padding: 0;
-//   margin-top: 20px;
-//   @include mdSize {
-//     margin-top: 50px;
-//   }
-// }
-
-// .slick-dots li.slick-active button {
-//   opacity: 1;
-// }
-
-// .slick-dots button {
-//   width: 15px;
-//   height: 15px;
-//   border-radius: 50%;
-//   background-color: $primary-color;
-//   margin: 0 15px;
-//   opacity: .5;
-//   border: none;
-//   font-size: 0;
-// }
 
 
